@@ -1,2 +1,13 @@
 #!/bin/bash
-streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+# Limpieza de memoria
+python -c "import torch; torch.cuda.empty_cache()" 2>/dev/null || true
+
+# Variables críticas
+export PYTHONUNBUFFERED=TRUE
+
+# Inicio con timeout extendido
+timeout 300 streamlit run app.py \
+    --server.port=$PORT \
+    --server.address=0.0.0.0 \
+    --server.headless=true \
+    --server.enableCORS=false

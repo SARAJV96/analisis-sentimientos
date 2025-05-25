@@ -24,7 +24,7 @@ st.set_page_config(page_title="📊 Analizador", layout="wide")
 def cargar_datos():
     try:
         # URL raw de GitHub (asegúrate de que sea el enlace directo al archivo raw)
-        github_url = "https://raw.githubusercontent.com/tu_usuario/tu_repo/main/opiniones_clientes.csv"
+        github_url = "https://github.com/SARAJV96/analisis-sentimientos/blob/main/opiniones_clientes.csv"
         
         response = requests.get(github_url)
         response.raise_for_status()  # Verifica errores HTTP

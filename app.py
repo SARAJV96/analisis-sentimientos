@@ -15,7 +15,7 @@ st.set_page_config(page_title="analisis de Sentimientos", layout="wide")
 
 # Cargar datos (asegúrate de tener el CSV en la carpeta 'data')
 try:
-    df = pd.read_csv("data/opiniones_clientes.csv")
+    df = pd.read_csv("opiniones_clientes.csv")
 except FileNotFoundError:
     st.error("Archivo no encontrado: Crea una carpeta 'data' y coloca allí 'opiniones_clientes.csv'")
     st.stop()

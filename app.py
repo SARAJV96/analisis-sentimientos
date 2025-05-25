@@ -11,7 +11,7 @@ import nltk
 nltk.download('stopwords')
 
 # Configuración de la página
-st.set_page_config(page_title="Análisis de Sentimientos", layout="wide")
+st.set_page_config(page_title="analisis de Sentimientos", layout="wide")
 
 # Cargar datos (asegúrate de tener el CSV en la carpeta 'data')
 try:
